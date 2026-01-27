@@ -15,7 +15,21 @@ class Solutione {
             map1.put(brr[i] ,value+1);
         }
 
-        for(int key : )
+        List<Integer> list = new ArrayList<>();
+        for(int key : map2.keySet()){
+            if(!map1.containsKey(key)) list.add(key);
+            else if(map1.get(key )!=map2.get(key))list.add(key);
+        }
+
+        if(list.size()==0){
+            System.out.println(-1);
+        }
+        else{
+            Collections.sort(list);
+            for(int i = 0 ; i< list.size() ; i++){
+                System.out.println(list.get(i));
+            }
+        }
     }
 
 }
